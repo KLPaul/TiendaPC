@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+
+<head th:fragment="head">
+
+	<meta charset="UFT-8"/>
+	<title th:text="${titulo}"></title>
+	
+	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" >
+	
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+
+<body>
+	
+	<header th:fragment="header">
+	
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+			<img class="logo" th:src="@{/img/Boutique.png}"/>
+			<a class="navbar-brand" href="/Inicio">PCLapTop S.A.</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				
+				<ul class="nav nav-underline">
+					
+					<li class="nav-item">
+						<div class="nav-link-container">
+						<img class="logo" th:src="@{/img/categoria.png}"/>
+						<a class="nav-link " href="/formCategoria">Categoria</a>
+						</div>
+					</li>
+					
+					<li class="nav-item">
+						<div class="nav-link-container">
+						<img class="logo" th:src="@{/img/lista.png}"/>
+						<a class="nav-link " href="/listarCategoria">Lista Categoria</a>
+						</div>
+					</li>
+					
+					<li class="nav-item">
+					
+						<div class="nav-link-container">
+						<img class="logo" th:src="@{/img/producto.png}"/>
+						<a class="nav-link " href="/formProducto">Productos</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<div class="nav-link-container">
+						<img class="logo" th:src="@{/img/inventario.png}"/>
+						<a class="nav-link " href="/listarProducto">Inventario</a>
+						</div>
+					</li>
+					
+					<li class="nav-item">
+						<div class="nav-link-container">
+						<img class="logo" th:src="@{/img/reporte.png}"/>
+						<a class="nav-link disabled" href="/reporte">Reporte</a>
+						</div>
+					</li>
+					
+					
+	
+					
+				</ul>
+				
+			</div>
+		</div>
+	</nav>
+	
+	<div class="aler alter-success" th:if="${success != null}" th:text="${success}"></div>
+	<div class="aler alter-danger" th:if="${error != null}" th:text="${error}"></div>
+	<div class="aler alter-warning" th:if="${warning != null}" th:text="${warning}"></div>
+	<div class="aler alter-info" th:if="${info != null}" th:text="${info}"></div>
+	
+	</header>
+	
+	<div class="card">
+		<div class="card-header">
+			
+		</div>
+		<div class="card-body">
+			<blockquote class="blockquote mb-0">
+				
+				<div class="welcome-container">
+					<h1>¡Bienvenido al Sistema de Administración Tienda Computadoras PCLapTop!</h1>
+					<p>Nos alegra tenerte aquí. Nuestro sistema está diseñado para ayudarte a gestionar tu Pc o Laptops de manera rápida y eficiente.</p>
+
+					<h2>¿Cómo Funciona?</h2>
+				<ol>
+   					<li><strong>Agregar Nuevo Producto:</strong> Si deseas añadir un nuevo producto a tu inventario, simplemente haz clic en "Agregar Nuevo Producto" y completa el formulario con los detalles del producto.</li>
+    				<li><strong>Seguimiento de Inventario:</strong> Puedes revisar el estado de tu inventario, ver el stock disponible y actualizar la información de los productos cuando sea necesario.</li>
+    				
+				</ol>
+
+					<p>Si tienes alguna pregunta o necesitas ayuda adicional, no dudes en ponerte en contacto con nosotros. Estamos aquí para asistirte en todo momento.</p>
+
+					<p><strong>¡Gracias por confiar en nosotros para la gestión de tu inventario Tienda Computadoras PCLapTop!</strong></p>
+
+    			</div>
+				
+				
+			</blockquote>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<footer th:fragment="footer" class="container py-8">
+	
+	<hr/>
+	
+	 <div class="footer-container">
+            <img class="logo" th:src="@{/img/Logo.png}" alt="Logo.jpg"/>
+            <p class="text-black">
+                Este proyecto fue desarrollado por Paul, con Spring Tool Suite.<br/>
+                Todos los derechos reservados. Términos de uso y privacidad.
+            </p>
+     </div>
+        
+	<script th:src="@{/js/popper.min.js}" ></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+	<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+	
+	</footer>
+
+
+	
+</body>
+
+</html>

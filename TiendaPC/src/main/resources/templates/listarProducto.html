@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head  th:replace="~{layout/layout :: head}"></head>
+
+<body>
+
+	<header th:replace="~{layout/layout :: header}"></header>
+	
+	
+	<div class="card">
+		<div class="card-header" th:text="${titulo}"></div>
+		
+		 <!-- Formulario de búsqueda -->
+        <form class="d-flex" th:action="@{/buscar}" method="get" role="search">
+            <input class="form-control me-2" type="search" name="nombreProducto" placeholder="Buscar Productos" aria-label="Buscar" />
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+					
+		
+		<div class="card-body">
+		
+	
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Id Producto</th>
+						<th>Nombre Producto</th>
+						<th>Cantidad</th>
+						<th>Ubicacion</th>
+						<th>Fecha Caducidad</th>
+						<th>Categoria</th>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="producto: ${productos}">
+						<td th:text="${producto.idProducto}"></td>
+						<td th:text="${producto.nombreProducto}"></td>
+						<td th:text="${producto.cantidad}"></td>
+						<td th:text="${producto.ubicacion}"></td>
+						<td th:text="${producto.fechaCaducidad}"></td>
+						<td th:text="${producto.categoria.nombreCategoria}"></td>
+						<td><a class="btn btn-primary btn-xs" th:href="@{/formProducto/} + ${producto.idProducto}" th:text="'editar'"></a></td>
+						<td><a class="btn btn-success" th:href="@{/reporte/} + ${producto.idProducto}" th:text="'reporte'"></a></td>
+						<td><a class="btn btn-danger btn-xs" th:href="@{/eliminarProducto/} + ${producto.idProducto}" th:text="'eliminar'"></a></td>
+						
+					</tr>
+					
+				</tbody>
+			</table>
+			
+		</div>
+	</div>
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	<footer th:replace="~{layout/layout :: footer}"></footer>
+	
+</body>
+
+</html>

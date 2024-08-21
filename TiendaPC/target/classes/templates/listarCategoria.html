@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head  th:replace="~{layout/layout :: head}"></head>
+
+<body>
+
+	<header th:replace="~{layout/layout :: header}"></header>
+	
+	
+	<div class="card">
+		<div class="card-header" th:text="${titulo}"></div>
+		
+						
+		<div class="card-body">
+		
+	
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Id Categoria</th>
+						<th>Nombre Categoria</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="categoria: ${categorias}">
+						<td th:text="${categoria.idCategoria}"></td>
+						<td th:text="${categoria.nombreCategoria}"></td>
+						<td><a class="btn btn-primary btn-xs" th:href="@{/formCategoria/} + ${categoria.idCategoria}" th:text="'editar'"></a></td>
+						<td><a class="btn btn-danger btn-xs" th:href="@{/eliminarCategoria/} + ${categoria.idCategoria}" th:text="'eliminar'"></a></td>
+						
+					</tr>
+					
+				</tbody>
+			</table>
+			
+		</div>
+	</div>
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	<footer th:replace="~{layout/layout :: footer}"></footer>
+	
+</body>
+
+</html>

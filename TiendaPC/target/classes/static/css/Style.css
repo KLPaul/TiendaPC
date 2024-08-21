@@ -1,0 +1,183 @@
+.nav-link-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 8px; 
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000; 
+    font-size: 16px; 
+}
+
+
+  .card-custom {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .card-img-left {
+            width: 150px; /* Puedes ajustar el tamaño de la imagen */
+            height: auto;
+        }
+        
+
+/* VER */
+
+
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .section {
+            width: 48%;
+        }
+        .data-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .data-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+           
+        }
+        .data-title {
+            font-weight: bold;
+        }
+        .data-value {
+            color: #555;
+        }
+
+
+
+/* BIENVENIDA */
+.welcome-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.welcome-container h1 {
+    color: #007bff;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.welcome-container h2 {
+    color: #007bff;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.welcome-container p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.welcome-container ol {
+    margin-left: 20px;
+}
+
+.welcome-container ol li {
+    margin-bottom: 10px;
+}
+
+.welcome-container hr {
+    border: 0;
+    border-top: 3px solid #007bff;
+    margin: 20px 0;
+}
+
+
+/* CARD */
+.card {
+    border: 1px solid #ddd; /* Borde para la tarjeta */
+    border-radius: 4px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para la tarjeta */
+    overflow: hidden; /* Ocultar desbordamiento */
+    margin: 20px; /* Espaciado alrededor de la tarjeta */
+}
+
+/* Estilos para el encabezado de la tarjeta */
+.card-header {
+    background-color: #f8f9fa; /* Color de fondo del encabezado */
+    padding: 15px; /* Padding para el encabezado */
+    font-weight: bold; /* Texto en negrita */
+    border-bottom: 1px solid #ddd; /* Borde inferior */
+}
+
+/* Estilos para el cuerpo de la tarjeta */
+.card-body {
+    padding: 20px; /* Padding para el cuerpo */
+}
+
+/* Estilos para el blockquote */
+.blockquote {
+    margin: 0; /* Margen por defecto eliminado */
+    padding-left: 20px; /* Padding izquierdo */
+    border-left: 5px solid #ccc; /* Borde izquierdo */
+}
+
+
+/* FOOTER */
+
+/* Estilos generales para el footer */
+footer {
+    background-color: #f8f9fa; /* Color de fondo del footer */
+    padding: 20px 0; /* Espaciado alrededor del contenido del footer */
+    text-align: center; /* Centrar el contenido del footer */
+}
+
+/* Estilos para el contenedor del footer */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para la imagen dentro del footer */
+.footer-container .img {
+    width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+    margin-bottom: 15px; /* Espaciado debajo de la imagen */
+}
+
+/* Estilos para el texto dentro del footer */
+.footer-container .text-black {
+    color: #343a40; /* Color del texto */
+    font-size: 14px; /* Tamaño de fuente del texto */
+    margin: 0; /* Eliminar márgenes por defecto */
+}
+
+/* Estilos para el <hr> dentro del footer */
+footer hr {
+    margin: 20px 0; /* Ajustar el espaciado alrededor del <hr> */
+    border: 0; /* Eliminar borde por defecto */
+    border-top: 1px solid #dee2e6; /* Borde superior personalizado */
+}
+
+/* Estilos responsivos */
+@media (min-width: 576px) {
+    .footer-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .footer-container .img {
+        margin-bottom: 0;
+        margin-right: 20px; /* Espacio entre la imagen y el texto */
+    }
+
+    .footer-container .text-black {
+        text-align: left;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+
+<head  th:replace="~{layout/layout :: head}"></head>
+<body>
+	
+	<header th:replace="~{layout/layout :: header}"></header>
+
+	
+	<div class="card">
+		<div class="card-header" th:text="${titulo}"></div>
+		<div class="card-body">
+		
+		<h3 th:text="${asunto}"></h3>
+		
+		
+		<hr>
+			
+			<div class="main-container">
+				<div class="section">
+					<h5>Información de Producto</h5>
+					<div class="data-container">
+						<div class="data-item">
+							<span class="data-title">Nombre Producto:</span>
+							<span class="data-value" th:text="${nombreProducto}"></span>
+						</div>
+						<div class="data-item">
+							<span class="data-title">Cantidad:</span>
+							<span class="data-value" th:text="${cantidad}"></span>
+						</div>
+						<div class="data-item">
+							<span class="data-title">Ubicacion:</span>
+							<span class="data-value" th:text="${ubicacion}"></span>
+						</div>
+						<div class="data-item">
+							<span class="data-title">Fecha Caducidad:</span>
+							<span class="data-value" th:text="${fecha}"></span>
+						</div>
+						<div class="data-item">
+							<span class="data-title">Categoria:</span>
+							<span class="data-value" th:text="${categoria}"></span>
+						</div>
+						<div class="data-item">
+							<span class="data-title"></span>
+							<span class="data-value"></span>
+						</div>
+					</div>
+				</div>
+	
+		</div>
+		
+			
+	</div>
+</div>
+	
+	<footer th:replace="~{layout/layout :: footer}"></footer>
+</body>
+</html>
